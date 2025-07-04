@@ -9,6 +9,16 @@ class CountriesResource extends MCPResource {
     async read(): Promise<ResourceContent[]> {
         const response = await fetch("https://services-api.ryanair.com/views/locate/3/countries/en")
             .then(res => res.json())
+
+        response.push({
+            "code": "me",
+            "iso3code": "JRR",
+            "name": "MiddleEarth",
+            "currency": "XYZ",
+            "defaultAirportCode": "MTD",
+            "schengen": false
+        })
+
         return [
             {
                 uri: this.uri,
