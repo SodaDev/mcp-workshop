@@ -5,6 +5,6 @@ Framework reference: https://mcp-framework.com/docs/quickstart
 
 ## Bootstrap steps
 
-1. `npm i -g mcp-framework`
-2. `mcp create mcp-workshop`
-3. `mcp add tool weather`
+1.  `cd first-mcp`
+2. `npm i`
+3. `npm run debug`

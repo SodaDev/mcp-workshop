@@ -1,0 +1,30 @@
+{
+  "name": "my-first-mcp",
+  "version": "0.0.1",
+  "description": "my-first-mcp MCP server",
+  "type": "module",
+  "bin": {
+    "my-first-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && mcp-build",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "debug": "npm run build && DANGEROUSLY_OMIT_AUTH=true npx @modelcontextprotocol/inspector node dist/index.js",
+    "docker-build": "docker build -t first-mcp .",
+    "docker-run": "docker run -p 3000:3000 first-mcp"
+  },
+  "dependencies": {
+    "mcp-framework": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.19.0"
+  }
+}
