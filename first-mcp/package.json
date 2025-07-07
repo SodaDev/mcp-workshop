@@ -18,7 +18,8 @@
     "docker-run": "docker run -p 3000:3000 first-mcp"
   },
   "dependencies": {
-    "mcp-framework": "^0.2.2"
+    "mcp-framework": "^0.2.2",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
