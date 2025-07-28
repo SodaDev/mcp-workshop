@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && mcp-build",
+    "build": "rm -rf dist && tsc && mcp-build",
     "watch": "tsc --watch",
     "start": "node dist/index.js",
     "debug": "npm run build && DANGEROUSLY_OMIT_AUTH=true npx @modelcontextprotocol/inspector node dist/index.js",
